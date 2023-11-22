@@ -5,5 +5,6 @@ int main(){
     char nombre [NUM];
     gets (nombre);
     puts (nombre);
+    printf("hola");
     return 0;
 }
