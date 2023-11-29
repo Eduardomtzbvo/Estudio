@@ -28,12 +28,19 @@ int main(){
     if (eleccion == 3)
     {
         resultado = calcularMult(numero1,numero2);
-        printf("El resultado de la resta es: %f" ,resultado);
+        printf("El resultado de la multiplicacion es: %f" ,resultado);
     } else
     if (eleccion == 4)
     {
-        resultado = calcularDiv(numero1,numero2);
-        printf("El resultado de la resta es: %f" ,resultado);
+        if (numero2==0)
+        {
+            printf("No se puede dividir entre 0");
+        }else{
+            resultado = calcularDiv(numero1,numero2);
+            printf("El resultado de la division es: %f" ,resultado);
+
+        }
+
     }
     
     return 0;
@@ -61,6 +68,8 @@ float calcularMult(float numero1, float numero2){
 
 float calcularDiv(float numero1, float numero2){
     float resultado;
-    resultado = numero1 / numero2;
+    resultado = numero1 / numero2;  
+  
     return resultado;
+
 }
